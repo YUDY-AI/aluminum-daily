@@ -1,0 +1,466 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>ALUMINUM DAILY – 2026年6月3日</title>
+<style>
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+
+  body {
+    background: #f0ede6;
+    font-family: "PingFang TC", "Noto Sans TC", "Microsoft JhengHei", sans-serif;
+    color: #1a1a1a;
+    font-size: 15px;
+    line-height: 1.6;
+  }
+
+  .wrapper {
+    max-width: 920px;
+    margin: 0 auto;
+    padding: 0 16px 40px;
+  }
+
+  /* ── MASTHEAD ── */
+  .masthead {
+    background: #111;
+    color: #fff;
+    text-align: center;
+    padding: 18px 20px 14px;
+    border-bottom: 4px solid #b8860b;
+  }
+  .masthead-title {
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: 3rem;
+    font-weight: 700;
+    letter-spacing: 0.12em;
+    line-height: 1;
+  }
+  .masthead-sub {
+    font-size: 0.95rem;
+    color: #ccc;
+    margin-top: 4px;
+    letter-spacing: 0.08em;
+  }
+  .masthead-date {
+    font-size: 0.82rem;
+    color: #999;
+    margin-top: 6px;
+    border-top: 1px solid #333;
+    padding-top: 6px;
+  }
+
+  /* ── HERO ── */
+  .hero {
+    background: linear-gradient(135deg, #1a3a5c 0%, #2d5986 60%, #3a6fa8 100%);
+    color: #fff;
+    padding: 32px 28px;
+    margin: 0 0 20px;
+    border-radius: 0 0 8px 8px;
+    box-shadow: 0 4px 16px rgba(0,0,0,0.18);
+    position: relative;
+    overflow: hidden;
+  }
+  .hero::before {
+    content: "⚡";
+    position: absolute;
+    right: 24px;
+    top: 20px;
+    font-size: 5rem;
+    opacity: 0.12;
+  }
+  .hero-label {
+    display: inline-block;
+    background: #f9a825;
+    color: #1a1a1a;
+    font-size: 0.72rem;
+    font-weight: 700;
+    letter-spacing: 0.1em;
+    padding: 2px 10px;
+    border-radius: 2px;
+    margin-bottom: 12px;
+    text-transform: uppercase;
+  }
+  .hero-title {
+    font-family: Georgia, serif;
+    font-size: 1.9rem;
+    font-weight: 700;
+    line-height: 1.25;
+    margin-bottom: 14px;
+  }
+  .hero-body {
+    font-size: 0.97rem;
+    color: #d6e8ff;
+    max-width: 680px;
+    line-height: 1.7;
+  }
+
+  /* ── PRICE DASHBOARD ── */
+  .dashboard {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 12px;
+    margin-bottom: 20px;
+  }
+  @media (max-width: 620px) {
+    .dashboard { grid-template-columns: repeat(2, 1fr); }
+  }
+  .price-card {
+    background: #fff;
+    border-radius: 8px;
+    padding: 16px 14px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.08);
+    border-top: 4px solid #1a3a5c;
+    text-align: center;
+  }
+  .price-card.up { border-top-color: #d32f2f; }
+  .price-card.down { border-top-color: #2e7d32; }
+  .price-card.neutral { border-top-color: #5c5c5c; }
+  .price-label {
+    font-size: 0.7rem;
+    color: #777;
+    font-weight: 600;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    margin-bottom: 8px;
+  }
+  .price-number {
+    font-family: Georgia, serif;
+    font-size: 2rem;
+    font-weight: 700;
+    color: #1a1a1a;
+    line-height: 1;
+  }
+  .price-unit {
+    font-size: 0.72rem;
+    color: #999;
+    margin: 2px 0 6px;
+  }
+  .price-change {
+    font-size: 0.85rem;
+    font-weight: 700;
+    padding: 2px 8px;
+    border-radius: 4px;
+    display: inline-block;
+  }
+  .change-up { color: #d32f2f; background: #fdecea; }
+  .change-down { color: #2e7d32; background: #e8f5e9; }
+  .change-neutral { color: #555; background: #f0f0f0; }
+
+  /* ── SECTION CARDS ── */
+  .section-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 16px;
+    margin-bottom: 16px;
+  }
+  @media (max-width: 640px) {
+    .section-grid { grid-template-columns: 1fr; }
+  }
+  .section-card {
+    background: #fff;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.07);
+  }
+  .section-card.full-width {
+    grid-column: 1 / -1;
+  }
+  .section-header {
+    padding: 12px 18px;
+    font-weight: 700;
+    font-size: 1rem;
+    color: #fff;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+  }
+  .section-body {
+    padding: 16px 18px;
+  }
+  .news-item {
+    border-bottom: 1px solid #f0f0f0;
+    padding-bottom: 14px;
+    margin-bottom: 14px;
+  }
+  .news-item:last-child {
+    border-bottom: none;
+    margin-bottom: 0;
+    padding-bottom: 0;
+  }
+  .news-headline {
+    font-weight: 700;
+    font-size: 0.95rem;
+    margin-bottom: 5px;
+    color: #1a1a1a;
+  }
+  .news-body {
+    font-size: 0.88rem;
+    color: #444;
+    line-height: 1.65;
+  }
+  .impact {
+    font-size: 0.8rem;
+    font-style: italic;
+    margin-top: 6px;
+    padding: 4px 10px;
+    border-radius: 4px;
+    display: inline-block;
+  }
+
+  /* Section color themes */
+  .policy .section-header { background: linear-gradient(90deg, #e65100, #f57c00); }
+  .policy .impact { background: #fff3e0; color: #bf360c; }
+
+  .supply .section-header { background: linear-gradient(90deg, #0277bd, #0288d1); }
+  .supply .impact { background: #e1f5fe; color: #01579b; }
+
+  .logistics .section-header { background: linear-gradient(90deg, #00695c, #00838f); }
+  .logistics .impact { background: #e0f2f1; color: #00695c; }
+
+  .geopolitics .section-header { background: linear-gradient(90deg, #b71c1c, #c62828); }
+  .geopolitics .impact { background: #ffebee; color: #b71c1c; }
+
+  .misc .section-header { background: linear-gradient(90deg, #4a148c, #6a1b9a); }
+  .misc .impact { background: #f3e5f5; color: #4a148c; }
+
+  /* ── PETER'S NOTE ── */
+  .peter-note {
+    background: linear-gradient(135deg, #f9a825, #ffca28);
+    border-radius: 8px;
+    padding: 22px 24px;
+    margin: 20px 0 16px;
+    box-shadow: 0 3px 12px rgba(0,0,0,0.12);
+    display: flex;
+    align-items: flex-start;
+    gap: 16px;
+  }
+  .peter-note-icon {
+    font-size: 2rem;
+    flex-shrink: 0;
+  }
+  .peter-note-label {
+    font-size: 0.72rem;
+    font-weight: 700;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: #7a5c00;
+    margin-bottom: 4px;
+  }
+  .peter-note-text {
+    font-size: 1.05rem;
+    font-weight: 700;
+    color: #1a1200;
+    line-height: 1.5;
+  }
+
+  /* ── FOOTER ── */
+  .footer {
+    border-top: 1px solid #ccc;
+    padding-top: 14px;
+    font-size: 0.75rem;
+    color: #888;
+  }
+  .footer a { color: #888; }
+  .footer-title { font-weight: 700; margin-bottom: 6px; }
+  .footer-list { list-style: none; display: flex; flex-wrap: wrap; gap: 6px 16px; }
+
+  /* ── DIVIDER ── */
+  .section-divider {
+    border: none;
+    border-top: 2px solid #ddd;
+    margin: 4px 0 16px;
+  }
+  .section-title-bar {
+    font-family: Georgia, serif;
+    font-size: 1.1rem;
+    font-weight: 700;
+    color: #333;
+    border-bottom: 2px solid #1a3a5c;
+    padding-bottom: 6px;
+    margin-bottom: 12px;
+    letter-spacing: 0.04em;
+  }
+</style>
+</head>
+<body>
+
+<!-- MASTHEAD -->
+<div class="masthead">
+  <div class="masthead-title">ALUMINUM DAILY</div>
+  <div class="masthead-sub">Peter 專屬鋁金屬情報｜每日行情 × 供需 × 地緣風險</div>
+  <div class="masthead-date">2026年6月3日 星期三 ｜ Vol. 2026-06-03</div>
+</div>
+
+<div class="wrapper">
+
+<!-- HERO -->
+<div class="hero">
+  <div class="hero-label">今日頭條</div>
+  <div class="hero-title">鋁價攀四年新高：中東戰火 + 幾內亞限礦，全球供應緊繃至臨界點</div>
+  <div class="hero-body">
+    LME 鋁於 6月2日收報 <strong>3,761.80 USD/噸</strong>，較前日再漲 0.80%，逼近四年最高位。
+    伊朗戰事封鎖波斯灣出口、幾內亞正式宣布鋁土礦出口管制、
+    Trump 行政令更新 Section 232 關稅——三重衝擊疊加，
+    現貨升水已飆升至 19年最高水位，市場已進入高度緊張狀態。
+  </div>
+</div>
+
+<!-- PRICE DASHBOARD -->
+<div class="section-title-bar">📊 今日行情儀表板</div>
+<div class="dashboard">
+  <div class="price-card up">
+    <div class="price-label">LME 鋁現貨</div>
+    <div class="price-number">3,762</div>
+    <div class="price-unit">USD / 噸</div>
+    <div class="price-change change-up">▲ +0.80% / +30</div>
+  </div>
+  <div class="price-card up">
+    <div class="price-label">SHFE 滬鋁主力</div>
+    <div class="price-number">~25,800</div>
+    <div class="price-unit">CNY / 噸（估算）</div>
+    <div class="price-change change-up">▲ 隨 LME 走強</div>
+  </div>
+  <div class="price-card down">
+    <div class="price-label">LME 庫存</div>
+    <div class="price-number">349,100</div>
+    <div class="price-unit">噸（持續下降）</div>
+    <div class="price-change change-down">▼ 年初 492,000t</div>
+  </div>
+  <div class="price-card neutral">
+    <div class="price-label">USD / CNY</div>
+    <div class="price-number">6.7651</div>
+    <div class="price-unit">人民幣匯率</div>
+    <div class="price-change change-neutral">— 基本持平</div>
+  </div>
+</div>
+
+<!-- SECTIONS -->
+<div class="section-grid">
+
+  <!-- 政策與貿易 -->
+  <div class="section-card policy">
+    <div class="section-header">🌍 政策與貿易</div>
+    <div class="section-body">
+      <div class="news-item">
+        <div class="news-headline">Trump 更新 Section 232 鋁關稅（6/8 生效）</div>
+        <div class="news-body">
+          白宮於 6月2日正式簽署行政令，調整鋁、鋼、銅進口關稅架構。
+          新規允許廠商若設備採用 ≥85% 美國熔鑄鋁/鋼，可適用 10% 優惠稅率（原 25%+）。
+          措施有效期至 2027年12月31日，目的是刺激美國境內產能投資。
+          英國繼續豁免於額外加碼（50% 稅率中豁免）。
+        </div>
+        <span class="impact">→ 短期對非美供應商增加成本壓力；鼓勵本土採購鏈重組，中期影響鋁材進口格局</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- 供需動態 -->
+  <div class="section-card supply">
+    <div class="section-header">🏭 供需動態</div>
+    <div class="section-body">
+      <div class="news-item">
+        <div class="news-headline">中國日產創歷史高峰：129,000 噸/天</div>
+        <div class="news-body">
+          中國電解鋁日產量於 2026年4月創下 129,000 噸/天歷史紀錄，
+          技術優化使得在 4,500 萬噸產能上限政策下，實際產出仍比名目產能高出約 3%。
+          中國佔全球鋁產量 58–60%，龐大產能雖支撐供應，但在中東缺口前已明顯不足。
+        </div>
+        <span class="impact">→ 中國持續增產略緩全球缺口，但無法彌補中東 9% 的突然缺失；國內現貨壓力相對較低</span>
+      </div>
+      <div class="news-item">
+        <div class="news-headline">LME 庫存快速耗盡，現貨升水創 19年新高</div>
+        <div class="news-body">
+          LME 倉庫庫存從年初 492,000 噸已降至約 349,100 噸，跌幅超過 29%。
+          現貨對三個月期貨升水已飆升至 19年來最高，顯示即期交貨緊缺程度異常。
+        </div>
+        <span class="impact">→ 庫存持續下行，即期鋁料採購成本顯著攀升；有意採購者宜盡快確認貨源</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- 戰爭與地緣政治 -->
+  <div class="section-card geopolitics full-width">
+    <div class="section-header">⚔️ 戰爭與地緣政治</div>
+    <div class="section-body">
+      <div class="news-item">
+        <div class="news-headline">伊朗戰事：中東鋁供應缺口達全球 9%，ALBA 減產 19%</div>
+        <div class="news-body">
+          美以對伊朗的軍事行動持續衝擊中東鋁業——荷姆茲海峽封鎖導致區域出口中斷。
+          巴林 ALBA（全球最大電解鋁廠）已減產 19%（對應其 160 萬噸年產能，約 30 萬噸損失）；
+          阿聯酋 EGA 旗艦廠預計需一年才能恢復至滿產。
+          整體中東地區約佔全球鋁供應 9%，此缺口短期難以彌補。
+          分析師預測，若局勢持續，鋁價有望上攻 4,000 USD/噸。
+        </div>
+        <span class="impact">→ 核心驅動力，支撐強烈漲價預期；ALBA/EGA 長單客戶需立即評估替代供應</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- 物流與船運 -->
+  <div class="section-card logistics">
+    <div class="section-header">🚢 物流與原料</div>
+    <div class="section-body">
+      <div class="news-item">
+        <div class="news-headline">幾內亞宣布鋁土礦出口管制，每年上限約 1.5 億噸</div>
+        <div class="news-body">
+          幾內亞礦業部長宣布，因 2025 年出口量暴衝至 1.83 億噸導致國際鋁土礦價格崩跌約 50%，
+          政府決定將年度出口量管制至 1.5 億噸左右，並要求與核准採礦計劃掛鉤。
+          幾內亞約佔中國鋁土礦進口的 75%（中國年進口約 2.01 億噸），
+          管制措辭同時提及強制投資五座氧化鋁精煉廠（合計 720 萬噸/年）。
+        </div>
+        <span class="impact">→ 短期氧化鋁成本上升壓力；若中國採購受限，華東鋁廠原料成本可能上揚 5–10%</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- 其他值得注意 -->
+  <div class="section-card misc">
+    <div class="section-header">💡 其他值得注意</div>
+    <div class="section-body">
+      <div class="news-item">
+        <div class="news-headline">AI 與能源轉型需求持續拉抬基本金屬</div>
+        <div class="news-body">
+          資金面，市場持續押注 AI 基礎建設（資料中心散熱、電纜）與能源轉型（太陽能板、電動車）
+          帶動鋁的長線結構性需求，與供給衝擊疊加，推動金屬板塊整體強勢。
+          ING 與多家機構維持 2026 年全年鋁市供應赤字預測。
+        </div>
+        <span class="impact">→ 需求面提供中長期底部支撐，即便地緣風險退場，鋁價下行空間有限</span>
+      </div>
+    </div>
+  </div>
+
+</div><!-- end section-grid -->
+
+<!-- PETER'S NOTE -->
+<div class="peter-note">
+  <div class="peter-note-icon">🎯</div>
+  <div>
+    <div class="peter-note-label">給 Peter 的今日一句話</div>
+    <div class="peter-note-text">
+      庫存跌、中東缺貨、幾內亞卡原料——鋁價往 4,000 美元推進的路徑已成形；
+      <br>今天最重要的事：盤點手上庫存與長單覆蓋率，確認未來 3 個月的鋁料貨源是否已鎖定。
+    </div>
+  </div>
+</div>
+
+<!-- FOOTER -->
+<div class="footer">
+  <div class="footer-title">📎 資料來源</div>
+  <ul class="footer-list">
+    <li><a href="https://tradingeconomics.com/commodity/aluminum" target="_blank">Trading Economics – Aluminum Price</a></li>
+    <li><a href="https://www.bloomberg.com/news/articles/2026-06-02/aluminum-advances-to-four-year-high-on-tighter-global-market" target="_blank">Bloomberg – Aluminum Four-Year High (2026-06-02)</a></li>
+    <li><a href="https://www.whitehouse.gov/fact-sheets/2026/06/fact-sheet-president-donald-j-trump-updates-tariffs-on-steel-aluminum-and-copper-imports/" target="_blank">White House – Section 232 Tariff Update (2026-06)</a></li>
+    <li><a href="https://www.bloomberg.com/news/articles/2026-05-25/top-bauxite-producer-guinea-to-unveil-export-controls-in-june" target="_blank">Bloomberg – Guinea Bauxite Export Controls</a></li>
+    <li><a href="https://www.bloomberg.com/news/articles/2026-05-19/china-s-aluminum-output-surge-tests-capacity-and-demand-limits" target="_blank">Bloomberg – China Aluminum Output Surge</a></li>
+    <li><a href="https://www.cnbc.com/2026/03/18/why-aluminum-surged-iran-war.html" target="_blank">CNBC – Iran War Aluminum Supply Disruption</a></li>
+    <li><a href="https://discoveryalert.com.au/copper-prices-war-outlook-aluminum-demand-supply-2026/" target="_blank">Discovery Alert – War Outlook & Aluminum Supply</a></li>
+  </ul>
+  <div style="margin-top:10px; color:#aaa; font-size:0.72rem;">
+    本報告由 Claude AI 自動生成，數據截至 2026年6月3日。SHFE 滬鋁價格為基於 LME 趨勢之估算值，請以官方盤面為準。
+  </div>
+</div>
+
+</div><!-- end wrapper -->
+</body>
+</html>
