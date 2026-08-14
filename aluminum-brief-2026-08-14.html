@@ -165,6 +165,56 @@
   .sec-other { background: #f5f0ff; border-left: 5px solid #6a1b9a; }
   .sec-other .section-title { color: #4a148c; }
 
+  /* 多空交易 */
+  .sec-trading { background: #f1f8e9; border-left: 5px solid #33691e; }
+  .sec-trading .section-title { color: #1b5e20; }
+  .trading-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 14px;
+    margin-bottom: 14px;
+  }
+  @media (max-width: 580px) { .trading-grid { grid-template-columns: 1fr; } }
+  .trading-box {
+    background: rgba(255,255,255,0.7);
+    border-radius: 8px;
+    padding: 14px 16px;
+    border: 1px solid #c5e1a5;
+  }
+  .trading-box h4 {
+    font-size: 0.85rem;
+    font-weight: 700;
+    color: #1b5e20;
+    margin-bottom: 10px;
+    padding-bottom: 5px;
+    border-bottom: 1px dashed #a5d6a7;
+  }
+  .pos-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 4px 0;
+    font-size: 0.83rem;
+    border-bottom: 1px solid #f1f8e9;
+  }
+  .pos-row:last-child { border-bottom: none; }
+  .pos-label { color: #555; }
+  .pos-val { font-weight: 700; }
+  .bull { color: #d32f2f; }
+  .bear { color: #2e7d32; }
+  .neutral-val { color: #f57c00; }
+  .signal-bar {
+    background: #e8f5e9;
+    border-radius: 6px;
+    padding: 10px 14px;
+    margin-top: 10px;
+    font-size: 0.82rem;
+    color: #2e7d32;
+    font-weight: 600;
+  }
+  .signal-bar.warn { background: #fff3e0; color: #e65100; }
+  .signal-bar.danger { background: #fce4ec; color: #c62828; }
+
   /* 新聞項目 */
   .news-item { margin-bottom: 18px; }
   .news-item:last-child { margin-bottom: 0; }
@@ -477,6 +527,108 @@
         胡塞武裝持續威脅紅海商船，主流班輪公司維持好望角繞行政策，短期無跡象恢復原航線。繞行使歐亞航線成本及時間雙升，間接拉高鋁材歐洲到岸成本。
       </div>
       <div class="impact neutral">→ 對銷往歐洲的鋁材出口商，交期與成本均需納入繞行緩衝。</div>
+    </div>
+  </div>
+
+  <!-- 期貨多空交易量 -->
+  <div class="section sec-trading">
+    <div class="section-title"><span class="icon">📈</span> 期貨多空倉位分析</div>
+
+    <div class="trading-grid">
+      <!-- SHFE 滬鋁 -->
+      <div class="trading-box">
+        <h4>🇨🇳 SHFE 滬鋁期貨（8/10 最新）</h4>
+        <div class="pos-row">
+          <span class="pos-label">收盤價</span>
+          <span class="pos-val">23,950 CNY/噸</span>
+        </div>
+        <div class="pos-row">
+          <span class="pos-label">日內漲跌</span>
+          <span class="pos-val bear">▼ −0.13%</span>
+        </div>
+        <div class="pos-row">
+          <span class="pos-label">成交量</span>
+          <span class="pos-val neutral-val">49,000 口（縮量）</span>
+        </div>
+        <div class="pos-row">
+          <span class="pos-label">MACD 信號</span>
+          <span class="pos-val bull">金叉 ✓（DIF 140.3 / DEA 45.3）</span>
+        </div>
+        <div class="pos-row">
+          <span class="pos-label">均線系統</span>
+          <span class="pos-val bull">多頭排列 ↑</span>
+        </div>
+        <div class="pos-row">
+          <span class="pos-label">MA5 / MA10 / MA30</span>
+          <span class="pos-val" style="font-size:0.75rem;">24,000 / 23,697 / 23,252</span>
+        </div>
+        <div class="pos-row">
+          <span class="pos-label">建議震盪區間</span>
+          <span class="pos-val">23,700–24,300 CNY</span>
+        </div>
+        <div class="pos-row">
+          <span class="pos-label">今日（8/14）動向</span>
+          <span class="pos-val bear">⚠ 期貨繼續回落整理</span>
+        </div>
+        <div class="pos-row">
+          <span class="pos-label">中國社會庫存（8/10）</span>
+          <span class="pos-val bear">917,000 噸（週減 41,000）</span>
+        </div>
+        <div class="signal-bar warn">
+          ⚡ 整體多頭結構仍完整，但縮量+今日回落，高位謹慎追多
+        </div>
+      </div>
+
+      <!-- LME 投資基金倉位 -->
+      <div class="trading-box">
+        <h4>🌐 LME 投資基金倉位（COT）</h4>
+        <div class="pos-row">
+          <span class="pos-label">基金淨多倉（W29/7月底）</span>
+          <span class="pos-val bull">+130,964 口</span>
+        </div>
+        <div class="pos-row">
+          <span class="pos-label">8/5 事件</span>
+          <span class="pos-val bear">大規模多頭平倉</span>
+        </div>
+        <div class="pos-row">
+          <span class="pos-label">平倉驅動</span>
+          <span class="pos-val" style="font-size:0.78rem;">地緣政治風險溢價消退</span>
+        </div>
+        <div class="pos-row">
+          <span class="pos-label">取消倉單（8/5）</span>
+          <span class="pos-val bear">14,750 噸（▼ −9.23%）</span>
+        </div>
+        <div class="pos-row">
+          <span class="pos-label">有效倉單</span>
+          <span class="pos-val">244,650 噸（不變）</span>
+        </div>
+        <div class="pos-row">
+          <span class="pos-label">遠端合約 Dec-27</span>
+          <span class="pos-val bull">$3,160/噸（▲ +0.38%）</span>
+        </div>
+        <div class="pos-row">
+          <span class="pos-label">多空比（L/S Ratio）</span>
+          <span class="pos-val bull">偏多（8/5 後已回穩）</span>
+        </div>
+        <div class="pos-row">
+          <span class="pos-label">亞洲參考價（8/5）</span>
+          <span class="pos-val bull">$3,241（▲ +0.56%）vs 倫敦 ▼</span>
+        </div>
+        <div class="signal-bar">
+          ✅ 長端多頭結構穩固，Dec-27 上漲反映基金長期看漲
+        </div>
+      </div>
+    </div>
+
+    <!-- 多空力道解讀 -->
+    <div class="news-item">
+      <div class="news-headline">📊 多空力道整體解讀</div>
+      <div class="news-body">
+        <strong>多方有利因素：</strong>LME 庫存本世紀新低 + Backwardation 逆價差（現貨緊俏）；SHFE 均線多頭排列；基金淨多倉仍在高位（+130,964 口）；Dec-27 長端走強，基金長線看漲；荷姆茲供應衝擊尚未解決。<br><br>
+        <strong>空方有利因素：</strong>8/5 大規模多頭平倉（地緣政治溢價部分消散）；取消倉單銳減 9.23%（物理需求急迫性下降）；SHFE 今日（8/14）期貨繼續回落，縮量整理；中國下游傳統淡季、需求疲軟；氧化鋁成本上升壓縮冶煉廠利潤。<br><br>
+        <strong>氧化鋁 Spot：</strong>今日（8/14）30,000 噸氧化鋁以 <strong>$374/噸 CFR 馬來西亞</strong> 成交（8月船期）——Alunorte 恢復後仍維持高溢價，原料成本壓力未消。
+      </div>
+      <div class="impact warn">→ 整體傾向：短線震盪偏多，但高位縮量需警惕回調；中長線（Dec-27 曲線）維持看漲。Peter 建議：若要採購鋁材，趁此整理回調逢低鎖價，優於追高。</div>
     </div>
   </div>
 
