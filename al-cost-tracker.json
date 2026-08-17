@@ -1,11 +1,11 @@
 {
   "shfe_tracker": {
     "days_accumulated": 1,
-    "last_settlement": 25420,
-    "long_avg": 25420,
-    "short_avg": 25420,
+    "last_settlement": 24320,
+    "long_avg": 24320,
+    "short_avg": 24320,
     "date": "2026-08-17",
-    "last_oi": 430000,
+    "last_oi": 450000,
     "last_volume": 200000,
     "long_profit_loss": 0,
     "long_profit_pct": 0.0,
@@ -15,32 +15,32 @@
   },
   "lme_tracker": {
     "weeks_accumulated": 0,
-    "lme_long_est": 3248.0,
-    "lme_short_est": 3247.9,
+    "lme_long_est": 3257,
+    "lme_short_est": 3256.4,
     "fund_net_long_lots": 140956,
     "date": "2026-08-17",
-    "last_cash_price": 3248.0,
-    "last_3m_price": 3246.0,
-    "cash_3m_spread": 2.0,
+    "last_cash_price": 3257,
+    "last_3m_price": 3245,
+    "cash_3m_spread": 12,
     "fund_net_long_prev": 140956,
     "fund_net_long_change": 0,
-    "lme_long_profit_loss": 0.0,
+    "lme_long_profit_loss": 0,
     "lme_long_profit_pct": 0.0,
-    "lme_short_profit_loss": 0.1,
-    "lme_short_profit_pct": 0.0,
+    "lme_short_profit_loss": 0.6,
+    "lme_short_profit_pct": 0.02,
     "confidence": "低（<4週）"
   },
   "history": [
     {
       "date": "2026-08-17",
-      "shfe_settlement": 25420,
-      "shfe_long_avg": 25420,
-      "shfe_short_avg": 25420,
-      "lme_cash": 3248.0,
-      "lme_3m": 3246.0,
+      "shfe_settlement": 24320,
+      "shfe_long_avg": 24320,
+      "shfe_short_avg": 24320,
+      "lme_cash": 3257,
+      "lme_3m": 3245,
       "lme_fund_net_long": 140956,
-      "lme_long_est": 3248.0,
-      "lme_short_est": 3247.9
+      "lme_long_est": 3257,
+      "lme_short_est": 3256.4
     }
   ]
 }
