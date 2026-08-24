@@ -1,0 +1,779 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>ALUMINUM DAILY — 2026年8月25日</title>
+<style>
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body { font-family: 'Georgia', 'Times New Roman', serif; background: #f5f0e8; color: #1a1a1a; }
+
+  /* MASTHEAD */
+  .masthead {
+    background: #1a1a1a;
+    color: #fff;
+    text-align: center;
+    padding: 18px 20px 14px;
+    border-bottom: 5px solid #d4a017;
+  }
+  .masthead h1 {
+    font-size: 3.2em;
+    letter-spacing: 0.18em;
+    font-weight: 900;
+    font-family: 'Georgia', serif;
+    text-transform: uppercase;
+  }
+  .masthead .subtitle {
+    font-size: 1.0em;
+    color: #d4a017;
+    letter-spacing: 0.12em;
+    margin-top: 4px;
+  }
+  .masthead .dateline {
+    font-size: 0.85em;
+    color: #aaa;
+    margin-top: 6px;
+    border-top: 1px solid #444;
+    padding-top: 6px;
+  }
+
+  /* HERO */
+  .hero {
+    background: linear-gradient(135deg, #1a3a5c 0%, #0d2137 100%);
+    color: #fff;
+    padding: 28px 32px;
+    margin: 0;
+  }
+  .hero-tag {
+    background: #d4a017;
+    color: #000;
+    font-size: 0.75em;
+    font-weight: 700;
+    padding: 3px 10px;
+    letter-spacing: 0.1em;
+    display: inline-block;
+    margin-bottom: 12px;
+    text-transform: uppercase;
+  }
+  .hero-headline {
+    font-size: 2.0em;
+    font-weight: 900;
+    line-height: 1.25;
+    margin-bottom: 12px;
+    font-family: Georgia, serif;
+  }
+  .hero-body {
+    font-size: 1.05em;
+    line-height: 1.7;
+    color: #c8ddf0;
+    max-width: 900px;
+  }
+
+  /* CONTAINER */
+  .container { max-width: 1200px; margin: 0 auto; padding: 0 16px; }
+
+  /* DASHBOARD */
+  .dashboard {
+    background: #fff;
+    border-bottom: 3px solid #1a1a1a;
+    padding: 20px 24px;
+  }
+  .dashboard-title {
+    font-size: 0.75em;
+    text-transform: uppercase;
+    letter-spacing: 0.12em;
+    color: #666;
+    font-weight: 700;
+    margin-bottom: 14px;
+    font-family: Arial, sans-serif;
+  }
+  .dashboard-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 12px;
+  }
+  @media (max-width: 768px) { .dashboard-grid { grid-template-columns: repeat(2, 1fr); } }
+  .card {
+    border: 2px solid #e0e0e0;
+    border-radius: 6px;
+    padding: 14px 16px;
+    background: #fafafa;
+    position: relative;
+  }
+  .card.primary {
+    background: #1a3a5c;
+    color: #fff;
+    border-color: #1a3a5c;
+    grid-column: span 1;
+  }
+  .card-label {
+    font-size: 0.72em;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    color: #888;
+    font-family: Arial, sans-serif;
+    font-weight: 700;
+  }
+  .card.primary .card-label { color: #7eb3d4; }
+  .card-value {
+    font-size: 2.0em;
+    font-weight: 900;
+    font-family: Arial, sans-serif;
+    color: #1a1a1a;
+    margin: 4px 0 2px;
+    line-height: 1;
+  }
+  .card.primary .card-value { color: #fff; font-size: 2.4em; }
+  .card-change {
+    font-size: 0.88em;
+    font-family: Arial, sans-serif;
+    font-weight: 600;
+  }
+  .up { color: #d32f2f; }
+  .down { color: #1976d2; }
+  .neutral { color: #666; }
+  .card-note {
+    font-size: 0.72em;
+    color: #999;
+    margin-top: 4px;
+    font-family: Arial, sans-serif;
+  }
+  .card.primary .card-note { color: #7eb3d4; }
+  .card.primary .card-change { color: #ffcc80; }
+
+  /* SPREAD BADGE */
+  .spread-badge {
+    display: inline-block;
+    background: #1976d2;
+    color: #fff;
+    font-size: 0.72em;
+    padding: 2px 8px;
+    border-radius: 3px;
+    margin-top: 4px;
+    font-family: Arial, sans-serif;
+    font-weight: 600;
+  }
+  .spread-badge.backwardation { background: #e65100; }
+
+  /* SECTION CARDS */
+  .section-card {
+    background: #fff;
+    border-radius: 8px;
+    margin: 16px 0;
+    overflow: hidden;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+  }
+  .section-header {
+    padding: 12px 20px;
+    font-size: 1.1em;
+    font-weight: 700;
+    letter-spacing: 0.05em;
+    color: #fff;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-family: Arial, sans-serif;
+  }
+  .section-body { padding: 18px 20px; }
+  .section-body p { line-height: 1.75; margin-bottom: 10px; font-size: 0.97em; }
+  .section-body p:last-child { margin-bottom: 0; }
+
+  /* Colors per section */
+  .policy-header { background: #ed6c02; }
+  .supply-header { background: #0288d1; }
+  .shipping-header { background: #00838f; }
+  .war-header { background: #c62828; }
+  .position-header { background: #33691e; }
+  .misc-header { background: #6a1b9a; }
+
+  /* POSITION TRACKER */
+  .position-body {
+    background: #f1f8e9;
+    padding: 20px;
+  }
+  .position-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+    margin-bottom: 20px;
+  }
+  @media (max-width: 768px) { .position-grid { grid-template-columns: 1fr; } }
+  .pos-col {
+    background: #fff;
+    border-radius: 8px;
+    padding: 16px;
+    border: 2px solid #c5e1a5;
+  }
+  .pos-col-title {
+    font-size: 0.8em;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    font-weight: 700;
+    color: #33691e;
+    border-bottom: 2px solid #c5e1a5;
+    padding-bottom: 8px;
+    margin-bottom: 12px;
+    font-family: Arial, sans-serif;
+  }
+  .pos-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 6px 0;
+    border-bottom: 1px solid #f0f0f0;
+    font-size: 0.88em;
+  }
+  .pos-row:last-child { border-bottom: none; }
+  .pos-label { color: #555; font-family: Arial, sans-serif; }
+  .pos-value { font-weight: 700; font-family: Arial, sans-serif; }
+  .tracker-box {
+    background: #e8f5e9;
+    border: 2px solid #81c784;
+    border-radius: 6px;
+    padding: 12px 14px;
+    margin: 10px 0;
+  }
+  .tracker-title {
+    font-size: 0.78em;
+    font-weight: 700;
+    color: #2e7d32;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    font-family: Arial, sans-serif;
+    margin-bottom: 4px;
+  }
+  .tracker-price {
+    font-size: 1.6em;
+    font-weight: 900;
+    color: #1b5e20;
+    font-family: Arial, sans-serif;
+  }
+  .tracker-pl {
+    font-size: 0.85em;
+    font-family: Arial, sans-serif;
+    margin-top: 3px;
+  }
+  .cold-start-badge {
+    display: inline-block;
+    background: #ff8f00;
+    color: #fff;
+    font-size: 0.7em;
+    padding: 2px 8px;
+    border-radius: 3px;
+    font-family: Arial, sans-serif;
+    font-weight: 600;
+    margin-top: 6px;
+  }
+
+  /* SHIPPING TABLE */
+  .shipping-table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 0.92em;
+    font-family: Arial, sans-serif;
+  }
+  .shipping-table th {
+    background: #e0f7fa;
+    color: #006064;
+    padding: 8px 12px;
+    text-align: left;
+    font-size: 0.8em;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+  }
+  .shipping-table td {
+    padding: 9px 12px;
+    border-bottom: 1px solid #e0e0e0;
+  }
+  .shipping-table tr:hover td { background: #f9f9f9; }
+  .tight { color: #e65100; font-weight: 700; }
+  .normal { color: #388e3c; font-weight: 700; }
+
+  /* CONCLUSION BAR */
+  .conclusion-bar {
+    background: #1b5e20;
+    color: #fff;
+    border-radius: 8px;
+    padding: 16px 20px;
+    margin-top: 16px;
+  }
+  .conclusion-bar h4 {
+    font-size: 1.0em;
+    margin-bottom: 10px;
+    font-family: Arial, sans-serif;
+    letter-spacing: 0.05em;
+  }
+  .bull-bear-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 16px;
+    margin-bottom: 12px;
+  }
+  .bull-box, .bear-box {
+    border-radius: 6px;
+    padding: 10px 14px;
+  }
+  .bull-box { background: rgba(211,47,47,0.2); border-left: 4px solid #ef9a9a; }
+  .bear-box { background: rgba(30,136,229,0.2); border-left: 4px solid #90caf9; }
+  .bull-box h5, .bear-box h5 {
+    font-size: 0.78em;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    margin-bottom: 6px;
+    font-family: Arial, sans-serif;
+  }
+  .bull-box ul, .bear-box ul {
+    list-style: none;
+    padding: 0;
+    font-size: 0.85em;
+    line-height: 1.7;
+  }
+  .bull-box li::before { content: "▲ "; color: #ef9a9a; }
+  .bear-box li::before { content: "▼ "; color: #90caf9; }
+  .action-line {
+    background: rgba(255,255,255,0.15);
+    border-radius: 4px;
+    padding: 8px 14px;
+    font-size: 0.92em;
+    font-weight: 600;
+    font-family: Arial, sans-serif;
+  }
+  .action-line span { color: #ffcc80; }
+
+  /* PETER'S WORD */
+  .peter-word {
+    background: linear-gradient(90deg, #f9a825 0%, #fbc02d 100%);
+    color: #1a1a1a;
+    padding: 20px 28px;
+    margin: 20px 0 0;
+    border-radius: 8px;
+    font-size: 1.1em;
+    font-weight: 700;
+    line-height: 1.6;
+    font-family: Georgia, serif;
+  }
+  .peter-word .peter-label {
+    font-size: 0.7em;
+    text-transform: uppercase;
+    letter-spacing: 0.12em;
+    color: #5d4037;
+    font-family: Arial, sans-serif;
+    margin-bottom: 6px;
+    font-weight: 700;
+  }
+
+  /* FOOTER */
+  .footer {
+    background: #1a1a1a;
+    color: #aaa;
+    padding: 20px 24px;
+    font-size: 0.8em;
+    font-family: Arial, sans-serif;
+    line-height: 1.8;
+    margin-top: 0;
+  }
+  .footer a { color: #d4a017; text-decoration: none; }
+  .footer a:hover { text-decoration: underline; }
+  .footer h5 { color: #fff; margin-bottom: 8px; letter-spacing: 0.05em; }
+
+  /* HIGHLIGHT */
+  .hl-red { color: #c62828; font-weight: 700; }
+  .hl-blue { color: #0288d1; font-weight: 700; }
+  .hl-orange { color: #e65100; font-weight: 700; }
+  .hl-green { color: #33691e; font-weight: 700; }
+
+  /* DIVIDER */
+  .divider { border: none; border-top: 2px solid #e0e0e0; margin: 6px 0; }
+  
+  /* MAIN LAYOUT */
+  .main-content { padding: 20px 24px; background: #f5f0e8; }
+  
+  /* INLINE FLAG */
+  .flag { display: inline-block; padding: 1px 6px; border-radius: 3px; font-size: 0.78em; font-family: Arial; font-weight: 700; margin-left: 6px; }
+  .flag-contango { background: #bbdefb; color: #0d47a1; }
+  .flag-backwardation { background: #ffe0b2; color: #bf360c; }
+</style>
+</head>
+<body>
+
+<!-- MASTHEAD -->
+<div class="masthead">
+  <div style="font-size:0.7em; letter-spacing:0.2em; color:#888; margin-bottom:4px; font-family:Arial">PETER YU 專屬情報 · 每日出刊</div>
+  <h1>⬡ ALUMINUM DAILY ⬡</h1>
+  <div class="subtitle">全球鋁金屬行情 · 供需 · 地緣政治 · 多空追蹤</div>
+  <div class="dateline">2026年8月25日（星期二）· 資料截至 2026-08-24 LME 收盤 / 2026-08-21 SHFE 收盤</div>
+</div>
+
+<!-- HERO -->
+<div class="hero">
+  <div class="container">
+    <div class="hero-tag">📰 今日頭條</div>
+    <div class="hero-headline" class="hero-headline">LME 庫存跌近28年新低，中東減產缺口難填補<br>鋁市 2026 全年預估短缺 14 萬噸</div>
+    <div class="hero-body">
+      LME 鋁庫存已降至 254,900 噸，較 1 月高峰暴跌 42.7%，創倫敦金屬交易所 28 年來最低紀錄。中東伊朗飛彈攻擊中斷阿聯酋 EGA 與巴林 Alba 產能，全年中東鋁產量恐減少逾 200 萬噸；中國雖加速增產，但仍難填補整體缺口，全球市場維持輕微年度短缺格局。現貨 LME 呈輕微升水（Cash 低於 3M），顯示市場預期供應後繼有力，但實體貨緊張信號仍在。
+    </div>
+  </div>
+</div>
+
+<!-- DASHBOARD -->
+<div class="dashboard">
+  <div class="container">
+    <div class="dashboard-title">📊 今日行情儀表板</div>
+    <div class="dashboard-grid">
+
+      <!-- LME Cash - PRIMARY -->
+      <div class="card primary">
+        <div class="card-label">🥇 LME 鋁 Cash（最重要）</div>
+        <div class="card-value">$3,218</div>
+        <div class="card-change down">▼ -30.5 / -0.94%（8/24）</div>
+        <div class="card-note">從 8/11 高點 $3,360 回落 4.2%<br>USD/噸 · LME Official</div>
+      </div>
+
+      <!-- LME 3M -->
+      <div class="card">
+        <div class="card-label">LME 鋁 3M 期貨</div>
+        <div class="card-value" style="color:#1a3a5c">$3,235</div>
+        <div class="card-change neutral">Cash vs 3M 價差：<strong style="color:#1976d2">-$17</strong></div>
+        <div class="spread-badge">升水 / Contango（供應寬鬆信號）</div>
+        <div class="card-note">3M 高於 Cash → 市場不擔憂即時短缺</div>
+      </div>
+
+      <!-- LME 庫存 -->
+      <div class="card">
+        <div class="card-label">LME 鋁庫存</div>
+        <div class="card-value" style="color:#c62828">254,900</div>
+        <div class="card-change" style="color:#c62828">▼ 28年新低 ↓42.7% vs 1月</div>
+        <div class="card-note">取消倉單：11,750噸（↓11.3%）<br>有效倉單緊張，實物提貨需求趨緩</div>
+      </div>
+
+      <!-- SHFE -->
+      <div class="card">
+        <div class="card-label">SHFE 滬鋁（輔助）</div>
+        <div class="card-value" style="color:#1a3a5c">¥23,620</div>
+        <div class="card-change up">▲ +80 / +0.34%（8/21）</div>
+        <div class="card-note">CNY/噸 · 5日均價 ¥23,770<br>8月以來自 ¥24,300 高位震盪回落</div>
+      </div>
+
+      <!-- USD/CNY -->
+      <div class="card">
+        <div class="card-label">USD / CNY 匯率</div>
+        <div class="card-value" style="color:#1a3a5c">6.7118</div>
+        <div class="card-change neutral">—（8/21 資料）</div>
+        <div class="card-note">SHFE 折合美元：~$3,519/噸（含增值稅）<br>不含增值稅約 $3,114/噸</div>
+      </div>
+
+      <!-- Freight -->
+      <div class="card">
+        <div class="card-label">🚢 中國→北美運費</div>
+        <div class="card-value" style="color:#00838f; font-size:1.5em">$5,878</div>
+        <div class="card-change" style="color:#00838f">上海→LA · /FEU</div>
+        <div class="card-note">上海→NY：~$7,598/FEU<br>旺季備貨需求支撐，艙位偏緊</div>
+      </div>
+
+    </div>
+  </div>
+</div>
+
+<!-- MAIN CONTENT -->
+<div class="main-content">
+<div class="container">
+
+  <!-- 政策與貿易 -->
+  <div class="section-card">
+    <div class="section-header policy-header">🌍 政策與貿易</div>
+    <div class="section-body">
+      <p>
+        <strong>Section 232 全面升級：</strong>2026年4月6日起，美國 Section 232 鋁關稅調整方式，<span class="hl-orange">改為對進口鋁製品全值徵稅</span>（原本僅對金屬含量部分），並對衍生產品統一徵收單一稅率，降低規避空間。商務部工業安全局（BIS）於 8 月 10 日再度提案擴大 232 稅目清單。
+      </p>
+      <p>
+        <strong>鋁擠型反補貼稅裁定：</strong>2026年8月11日，商務部公布針對中國鋁擠型材反補貼稅行政複審最終結果，長期對中國鋁加工品形成貿易壁壘，推升美國本地鋁溢價。
+      </p>
+      <p>
+        <strong>中美貿易談判：</strong>目前並無針對中國整體鋁類進口的新關稅談判動態，中美談判進展緩慢，整體關稅格局偏高。中國出口退稅政策（是否取消鋁錠退稅）仍是下半年最大政策不確定因素，一旦取消將大幅削減中國出口動能。
+      </p>
+    </div>
+  </div>
+
+  <!-- 供需動態 -->
+  <div class="section-card">
+    <div class="section-header supply-header">🏭 供需動態</div>
+    <div class="section-body">
+      <p>
+        <strong>全球 2026 年鋁市短缺 14 萬噸：</strong>中東戰亂衝擊中東（占全球產量 9%）供應，預估削減全年產量逾 200 萬噸；中國同期加速擴產填補部分缺口，最終全球仍維持輕微短缺格局，較 2025 年明顯收窄。
+      </p>
+      <p>
+        <strong>中國電解鋁產能持續擴張：</strong>光伏、電動車、電網基礎設施拉動需求強勁，中國保持增產，但電力成本與政府環保管制仍為潛在制約。若中國終端需求在 H2 旺季不如預期，國內庫存積壓恐加重拋壓。
+      </p>
+      <p>
+        <strong>EGA 復產進度：</strong>Emirates Global Aluminium 阿布達比 Al Taweelah 廠在 3 月遭伊朗攻擊後已啟動重啟，但<span class="hl-red">預估年底前無法恢復滿產</span>；加上 Bahrain 的 Alba 廠同時受損，短期中東鋁廠產能缺口難以填補。廢鋁再生需求因此急速增加。
+      </p>
+    </div>
+  </div>
+
+  <!-- 物流與航運 -->
+  <div class="section-card">
+    <div class="section-header shipping-header">🚢 物流與航運（三條航線）</div>
+    <div class="section-body">
+      <table class="shipping-table">
+        <thead>
+          <tr>
+            <th>航線</th>
+            <th>運費（/FEU）</th>
+            <th>市況</th>
+            <th>備註</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><strong>中國 → 北美西岸（LA）</strong></td>
+            <td><strong>$5,878</strong></td>
+            <td class="tight">偏緊</td>
+            <td>假日旺季備貨啟動，需求升溫</td>
+          </tr>
+          <tr>
+            <td><strong>中國 → 北美東岸（NY）</strong></td>
+            <td><strong>$7,598</strong></td>
+            <td class="tight">偏緊</td>
+            <td>東岸港口擁堵加劇運費溢價</td>
+          </tr>
+          <tr>
+            <td><strong>中國 → 歐洲（Rotterdam）</strong></td>
+            <td><strong>~$3,500</strong></td>
+            <td class="normal">正常</td>
+            <td>8月艙位趨穩；紅海繞道成本內含</td>
+          </tr>
+          <tr>
+            <td><strong>中國 → 印度（Mumbai）</strong></td>
+            <td><strong>~$1,350</strong></td>
+            <td class="normal">正常</td>
+            <td>印度鋁需求穩健，短程航線充裕</td>
+          </tr>
+        </tbody>
+      </table>
+      <p style="margin-top:12px; color:#555; font-size:0.88em;">
+        <strong>整體評估：</strong>中北美航線受旺季催動維持偏緊；SCFI 綜合指數 8 月以來在 2,700–3,200 點間震盪，歐線艙位月初已趨穩。紅海繞道增加航程 10-14 天，船期靈活性仍受限，業者宜提前 4-6 週訂艙。
+      </p>
+    </div>
+  </div>
+
+  <!-- 戰爭與地緣政治 -->
+  <div class="section-card">
+    <div class="section-header war-header">⚔️ 戰爭與地緣政治</div>
+    <div class="section-body">
+      <p>
+        <strong>伊朗─美以戰爭持續衝擊鋁供應鏈：</strong>2026年3月28日，伊朗革命衛隊（IRGC）以報復為由，向阿聯酋 EGA 的 Al Taweelah 廠及巴林 Alba 廠發動飛彈與無人機攻擊，造成設施重大損壞、多名員工受傷。這是本年度對全球鋁產業影響最深遠的地緣政治事件。
+      </p>
+      <p>
+        <strong>中東產量缺口估計 200 萬噸：</strong>中東地區占全球鋁產量 9%，若衝突持續、航運受阻，霍姆茲海峽可能成為氧化鋁與鋁土礦運輸瓶頸。目前 EGA 復產在即但進度遲緩，<span class="hl-red">年底前難回滿載</span>，是 LME 庫存維持低位的結構性原因。
+      </p>
+      <p>
+        <strong>紅海與霍姆茲：</strong>胡塞武裝仍持續威脅紅海航線，船隻續走好望角繞行，整體航程增加兩週；霍姆茲海峽雖未完全封閉，但中東地區原料（氧化鋁、鋁土礦）對外輸出仍面臨不確定性。
+      </p>
+    </div>
+  </div>
+
+  <!-- 多空倉位與均價追蹤 -->
+  <div class="section-card">
+    <div class="section-header position-header">📈 多空倉位與均價追蹤</div>
+    <div class="position-body">
+
+      <div class="position-grid">
+
+        <!-- 左欄：LME（主） -->
+        <div class="pos-col">
+          <div class="pos-col-title">🏆 LME 投資基金倉位（主要參考）</div>
+
+          <div class="pos-row">
+            <span class="pos-label">基金淨多倉（COT，截至 8/7）</span>
+            <span class="pos-value">140,956 口</span>
+          </div>
+          <div class="pos-row">
+            <span class="pos-label">週變化</span>
+            <span class="pos-value up">▲ +9,993 口（vs 週29：130,963）</span>
+          </div>
+          <div class="pos-row">
+            <span class="pos-label">取消倉單</span>
+            <span class="pos-value">11,750 噸</span>
+          </div>
+          <div class="pos-row">
+            <span class="pos-label">取消倉單週變化</span>
+            <span class="pos-value down">▼ -1,500 噸（-11.3%）→ 提貨潮趨緩</span>
+          </div>
+          <div class="pos-row">
+            <span class="pos-label">有效（on-warrant）倉單</span>
+            <span class="pos-value">~243,150 噸</span>
+          </div>
+          <div class="pos-row">
+            <span class="pos-label">Cash-3M 價差</span>
+            <span class="pos-value" style="color:#1976d2">-$17（升水/Contango）</span>
+          </div>
+          <div class="pos-row">
+            <span class="pos-label">升水解讀</span>
+            <span class="pos-value neutral" style="font-size:0.85em">市場預期後期供應充足；空頭交割壓力低</span>
+          </div>
+
+          <div class="tracker-box" style="border-color:#81c784">
+            <div class="tracker-title">🎯 LME 多頭均價追蹤</div>
+            <div class="tracker-price">$3,218.0 / 噸</div>
+            <div class="tracker-pl neutral">現價 vs 多頭均價：±$0.0 (0.00%)</div>
+            <div class="tracker-pl neutral">多頭幾乎打平 → 觀察後續方向</div>
+            <div class="cold-start-badge">⚠️ 冷啟動：系統第1天累積，精度低，僅供參考</div>
+          </div>
+
+          <div class="tracker-box" style="border-color:#ef9a9a; background:#fff8f8">
+            <div class="tracker-title" style="color:#c62828">🎯 LME 空頭均價追蹤</div>
+            <div class="tracker-price" style="color:#b71c1c">$3,218.8 / 噸</div>
+            <div class="tracker-pl" style="color:#e65100">現價 vs 空頭均價：-$0.8 → 空頭微幅獲利</div>
+            <div class="cold-start-badge">⚠️ 冷啟動：系統第1天，精度低，僅供參考</div>
+          </div>
+
+          <div class="pos-row" style="margin-top:8px">
+            <span class="pos-label">Cash-3M 空頭壓力計</span>
+            <span class="pos-value" style="color:#1976d2">升水 → 空頭壓力低（多頭未能製造逼倉）</span>
+          </div>
+
+        </div>
+
+        <!-- 右欄：SHFE（輔） -->
+        <div class="pos-col" style="border-color:#b0bec5;">
+          <div class="pos-col-title" style="color:#546e7a; border-bottom-color:#b0bec5;">📊 SHFE 滬鋁期貨（輔助參考）</div>
+
+          <div class="pos-row">
+            <span class="pos-label">收盤價（8/21）</span>
+            <span class="pos-value">¥23,620 CNY/噸</span>
+          </div>
+          <div class="pos-row">
+            <span class="pos-label">漲跌幅</span>
+            <span class="pos-value up">▲ +80（+0.34%）</span>
+          </div>
+          <div class="pos-row">
+            <span class="pos-label">5日均價</span>
+            <span class="pos-value">¥23,770</span>
+          </div>
+          <div class="pos-row">
+            <span class="pos-label">30日均價（MA30）</span>
+            <span class="pos-value">¥23,553</span>
+          </div>
+          <div class="pos-row">
+            <span class="pos-label">180日均價（MA180）</span>
+            <span class="pos-value">¥23,722</span>
+          </div>
+          <div class="pos-row">
+            <span class="pos-label">均線系統排列</span>
+            <span class="pos-value down">偏空排列↓（現價＜MA5＜MA30）</span>
+          </div>
+          <div class="pos-row">
+            <span class="pos-label">8月以來高點</span>
+            <span class="pos-value">¥24,305（8/12）</span>
+          </div>
+          <div class="pos-row">
+            <span class="pos-label">近期趨勢</span>
+            <span class="pos-value down">自 ¥24,305 震盪下行 -685（-2.8%）</span>
+          </div>
+
+          <div class="tracker-box" style="border-color:#a5d6a7">
+            <div class="tracker-title">🎯 SHFE 多頭均價追蹤</div>
+            <div class="tracker-price" style="color:#1b5e20">¥23,620 CNY</div>
+            <div class="tracker-pl neutral">現價 vs 多頭均價：±0（±0%）</div>
+            <div class="tracker-pl neutral">多頭起始日，觀察建倉成本累積</div>
+            <div class="cold-start-badge">⚠️ 冷啟動：第1天累積，精度低，僅供參考</div>
+          </div>
+
+          <div class="tracker-box" style="border-color:#ef9a9a; background:#fff8f8">
+            <div class="tracker-title" style="color:#c62828">🎯 SHFE 空頭均價追蹤</div>
+            <div class="tracker-price" style="color:#b71c1c">¥23,620 CNY</div>
+            <div class="tracker-pl neutral">現價 vs 空頭均價：±0（±0%）</div>
+            <div class="cold-start-badge">⚠️ 冷啟動：第1天，精度低，僅供參考</div>
+          </div>
+
+          <div class="pos-row" style="margin-top:8px">
+            <span class="pos-label">中國社會庫存</span>
+            <span class="pos-value">待更新</span>
+          </div>
+          <div class="pos-row">
+            <span class="pos-label">MACD 訊號</span>
+            <span class="pos-value down">DIF 向下穿越 DEA → 死叉格局</span>
+          </div>
+
+        </div>
+      </div><!-- end position-grid -->
+
+      <!-- 多空力道整體結論 -->
+      <div class="conclusion-bar">
+        <h4>⚖️ 多空力道整體解讀 · 2026-08-25</h4>
+        <div class="bull-bear-grid">
+          <div class="bull-box">
+            <h5>🔴 多方有利因素</h5>
+            <ul>
+              <li>LME 庫存 28 年最低，實體緊張格局不變</li>
+              <li>中東產能缺口 200 萬噸，年底前難恢復</li>
+              <li>LME 基金淨多倉維持高位（140,956 口）</li>
+            </ul>
+          </div>
+          <div class="bear-box">
+            <h5>🔵 空方有利因素</h5>
+            <ul>
+              <li>LME Cash-3M 升水（Contango），市場不擔憂即時短缺</li>
+              <li>中國增產抵銷中東缺口，全球短缺幅度有限</li>
+              <li>SHFE 均線偏空排列，8 月自高位下行 2.8%</li>
+            </ul>
+          </div>
+        </div>
+        <div class="action-line">
+          💡 給 Peter 的操作方向建議：<span>LME 庫存極低但升水結構顯示短期不緊，目前不宜追高；待 Cash-3M 由升水轉為逆差（Backwardation）或庫存再次加速下降，才是逢低鎖定採購價格的強信號。建議維持觀望，分批在 $3,150-$3,200 區間設置採購鎖價參考點。</span>
+        </div>
+      </div>
+
+    </div><!-- end position-body -->
+  </div><!-- end section-card -->
+
+  <!-- 其他值得注意 -->
+  <div class="section-card">
+    <div class="section-header misc-header">💡 其他值得注意</div>
+    <div class="section-body">
+      <p>
+        <strong>廢鋁需求激增：</strong>EGA/Alba 原生鋁產能受損，促使下游廠商加大廢鋁採購力度，廢鋁溢價與原生鋁價差縮窄。若戰局持續，廢鋁資源競爭將進一步激烈。
+      </p>
+      <p>
+        <strong>電動車、光伏需求持續增溫：</strong>電動車（EV）、電網升級、光伏組件對鋁需求結構性上升，是 2026-2027 年支撐鋁價的核心長多論點，現貨需求不會因短期價格回落而消失。
+      </p>
+      <p>
+        <strong>LME 鋁 2027 年 12 月期貨：</strong>分析機構（The Industry Spread）預測 LME 鋁有望在 Q4 2026 觸及 $3,600/噸，主要依據倉單稀缺性與中東供應中斷持續。此預測仍具不確定性，Peter 可作為上行情境參考。
+      </p>
+    </div>
+  </div>
+
+  <!-- PETER'S WORD -->
+  <div class="peter-word">
+    <div class="peter-label">📣 給 Peter 的一句話</div>
+    庫存創 28 年新低是事實，但升水結構說明市場還沒慌——等 Cash 高過 3M（逆差出現），那才是真正逢低鎖價的信號槍。現在的策略：設好 $3,150 的買入警戒線，中東局勢有任何新攻擊就立刻啟動鎖價機制。
+  </div>
+
+</div><!-- end container -->
+</div><!-- end main-content -->
+
+<!-- FOOTER -->
+<div class="footer">
+  <div class="container">
+    <h5>📚 資料來源</h5>
+    <a href="https://www.lme.com/metals/non-ferrous/lme-aluminium">London Metal Exchange — LME Aluminium</a> ·
+    <a href="https://www.worthwillaluminium.com/aluminum-price/shfe/">Worthwill — SHFE Aluminum Price</a> ·
+    <a href="https://www.worthwillaluminium.com/aluminum-price/lme/">Worthwill — LME Aluminum Price</a> ·
+    <a href="https://discoveryalert.com.au/lme-aluminium-price-stocks-cancelled-warrants-signal-2026/">Discovery Alert — LME Stocks & Cancelled Warrants Aug 2026</a> ·
+    <a href="https://www.alcircle.com/news/lme-aluminium-stocks-fall-to-the-lowest-level-this-century-amid-middle-east-supply-disruptions-120542">AlCircle — LME 庫存 28 年低</a> ·
+    <a href="https://www.bloomberg.com/news/articles/2026-03-28/emirates-global-aluminium-says-smelter-site-damaged-in-attack-mnaeo4uk">Bloomberg — EGA 遭攻擊</a> ·
+    <a href="https://think.ing.com/articles/the-commodities-feed-iran-hits-uae-and-bahrain-aluminium-plants/">ING Think — 中東鋁廠攻擊</a> ·
+    <a href="https://www.steelmarketupdate.com/2026/08/14/aluminums-peace-trade-one-month-later/">Steel Market Update — Aluminum Peace Trade</a> ·
+    <a href="https://brf-logistics.com/august-2026-ocean-freight-market-update/">BRF Logistics — Aug 2026 運費</a> ·
+    <a href="https://kisunshipping.com/china-to-usa-shipping-cost-august-2026/">Kisun Shipping — 中美運費 2026</a> ·
+    <a href="https://www.freightos.com/freight-resources/congestion-playing-a-bigger-role-in-container-rates-august-18-2026-update/">Freightos — 8/18 運費更新</a> ·
+    <a href="https://theindustryspread.com/?p=428775">The Industry Spread — 鋁 $3,600 預測</a>
+    <br><br>
+    <span style="color:#666">⚠️ 多空均價追蹤器系統初始化第1天，LME 第0週。估算值精度低，需累積30天以上數據方具參考價值。本報告為 Peter Yu 專屬決策參考，不構成投資建議。</span>
+    <br>
+    <span style="color:#666">📅 由 Claude AI 自動生成 · ALUMINUM DAILY · 2026-08-25</span>
+  </div>
+</div>
+
+</body>
+</html>
